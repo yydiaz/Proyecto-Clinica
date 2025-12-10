@@ -35,7 +35,32 @@ https://github.com/openxava/openxava/blob/master/openxavatest/src/main/resources
     <controller name="CitaController">
         <extends controller="Typical"/>
         <action name="validarConflictos" mode="detail"
-                class="org.example.ClinicaDelValle."
+                class="org.example.ClinicaDelValle.actions.ValidarConflictosAction"
+                icon="check-circle"
+                keystroke="Control V"/>
     </controller>
-    
+    <controller name="ExpedienteController">
+        <extends controller="Typical"/>
+        <action name="generarPdf" mode="detail"
+                class="org.example.ClinicaDelValle.actions.GenerarPdfAction"
+                icon="file-pdf"
+                keystroke="Control P"/>
+    </controller>
+    <!-- Controlador para Receta: Agrega acción para descontar stock -->
+    <controller name="RecetaController">
+        <extends controller="Typical"/>
+        <action name="descontarStock" mode="detail"
+                class="org.example.ClinicaDelValle.actions.DescontarStockAction"
+                icon="minus-circle"/>
+    </controller>
+    <!-- Modificar acción save estándar (ejemplo del maestro) -->
+    <controller name="MiCRUD">
+        <extends controller="Typical"/>
+        <action name="save" mode="detail"
+                by-default="if-possible"
+                class="org.example.ClinicaDelValle.actions.MiSaveAction"
+                image="save.gif"
+                icon="content-save"
+                keystroke="Control S"/>
+    </controller>
 </controllers>
