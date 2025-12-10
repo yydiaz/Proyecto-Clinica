@@ -20,16 +20,13 @@ public class ExpedienteDigital {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
     private Date fechaCreacion;
-
 
     @Enumerated(EnumType.STRING)
     private EstadoExpediente estado;
 
     public void setFechaCreacion(LocalDate now) {
     }
-
 
     public enum EstadoExpediente { ACTIVO, ARCHIVADO }
 
@@ -45,7 +42,6 @@ public class ExpedienteDigital {
 
     @OneToMany(mappedBy = "expediente", cascade = CascadeType.ALL)
     private List<HistoriaClinica> historial;
-
 
     @OneToMany(mappedBy = "expediente", cascade = CascadeType.ALL)
     private List<ArchivoAdjunto> adjuntos;

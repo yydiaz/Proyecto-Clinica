@@ -32,5 +32,10 @@ https://github.com/openxava/openxava/blob/master/openxavatest/src/main/resources
     	</action>
 	</controller>    
     -->
+    <controller name="CitaController">
+        <extends controller="Typical"/>
+        <action name="validarConflictos" mode="detail"
+                class="org.example.ClinicaDelValle."
+    </controller>
     
 </controllers>

@@ -47,7 +47,24 @@
 
     <persistence-unit name="ClinicaDelVallePU" transaction-type="JTA">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <jta-data-source>java:comp/env/jdbc/ClinicaDelValleDS</jta-data-source>  <!-- Referencia al JNDI de context.xml -->
+        <jta-data-source>java:comp/env/jdbc/ClinicaDelValleDS</jta-data-source><!-- Referencia al JNDI de context.xml -->
+        <class>org.example.ClinicaDelValle.model.Usuario</class>
+        <class>org.example.ClinicaDelValle.model.Paciente</class>
+        <class>org.example.ClinicaDelValle.model.ExpedienteDigital</class>
+        <class>org.example.ClinicaDelValle.model.Cita</class>
+        <class>org.example.ClinicaDelValle.model.HistoriaClinica</class>
+        <class>org.example.ClinicaDelValle.model.Receta</class>
+        <class>org.example.ClinicaDelValle.model.MedicamentoRecetado</class>
+        <class>org.example.ClinicaDelValle.model.OrdenExamen</class>
+        <class>org.example.ClinicaDelValle.model.ResultadoExamen</class>
+        <class>org.example.ClinicaDelValle.model.ArchivoAdjunto</class>
+        <class>org.example.ClinicaDelValle.model.Factura</class>
+        <class>org.example.ClinicaDelValle.model.DetalleFactura</class>
+        <class>org.example.ClinicaDelValle.model.Auditoria</class>
+        <class>org.example.ClinicaDelValle.model.Sala</class>
+        <class>org.example.ClinicaDelValle.model.Laboratorio</class>
+        <class>org.example.ClinicaDelValle.model.AccesoExpediente</class>
+        <class>org.example.ClinicaDelValle.model.Medicamento</class>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/>  <!-- Crea tablas automáticamente -->
