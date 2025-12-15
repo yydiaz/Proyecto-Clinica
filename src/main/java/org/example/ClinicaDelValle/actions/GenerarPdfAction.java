@@ -3,10 +3,11 @@ package org.example.ClinicaDelValle.actions;
 import org.example.ClinicaDelValle.model.ExpedienteDigital;
 import org.example.ClinicaDelValle.services.ExpedienteDigitalService;
 import org.openxava.actions.BaseAction;
+import org.openxava.actions.ViewBaseAction;
 
 import javax.persistence.OptimisticLockException;
 
-public class GenerarPdfAction extends BaseAction {
+public class GenerarPdfAction extends ViewBaseAction {
     @Override
     public void execute() throws Exception {
         ExpedienteDigital exp = (ExpedienteDigital) getView().getEntity();
@@ -15,5 +16,4 @@ public class GenerarPdfAction extends BaseAction {
         // Lógica para descargar PDF (ej. stream a response)
         addMessage("PDF generado");
     }
-
 }

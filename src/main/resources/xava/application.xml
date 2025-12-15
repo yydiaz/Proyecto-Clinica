@@ -3,15 +3,7 @@
 <!DOCTYPE application SYSTEM "dtds/application.dtd">
 
 <application name="ClinicaDelValle">
-    <module name="Cita">
-       <controller name="CitaController"/>
-    </module>
-    <module name="ExpedienteDigital">
-        <controller name="ExpedienteController"/>
-    </module>
-    <module name="Receta">
-        <controller name="RecetaController"/>
-    </module>
+
 	
 	<!-- 
 	A default module for each entity is assumed with the
@@ -28,5 +20,16 @@
 		<controller name="Print"/>
 	</module>		
 	-->
-	
+    <module name="Cita">
+        <model name="Cita"/>
+        <controller name="CitaController"/>
+    </module>
+    <module name="ExpedienteDigital">
+        <model name="ExpedienteDigital"/>  <!-- Agrega esto -->
+        <controller name="ExpedienteController"/>
+    </module>  
+    <module name="Receta">
+        <model name="Receta"/>  <!-- Agrega esto -->
+        <controller name="RecetaController"/>
+    </module>
 </application>
